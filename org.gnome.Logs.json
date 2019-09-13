@@ -103,6 +103,10 @@
           "type": "archive",
           "url": "https://download.gnome.org/sources/gnome-logs/3.34/gnome-logs-3.34.0.tar.xz",
           "sha256": "15f4af7085c88321624dc9416f07e7f997fc0fe4c6dd585bce512b11d2e34e9a"
+        },
+        {
+          "type": "patch",
+          "path": "appdata.patch"
         }
       ]
     }
