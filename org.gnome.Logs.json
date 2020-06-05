@@ -1,11 +1,11 @@
 {
   "app-id": "org.gnome.Logs",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.34",
+  "runtime-version": "3.36",
   "sdk": "org.gnome.Sdk",
   "command": "gnome-logs",
   "finish-args": [
-    "--share=ipc", "--socket=x11",
+    "--share=ipc", "--socket=fallback-x11",
     "--socket=wayland",
     "--filesystem=/var/log/journal:ro",
     "--metadata=X-DConf=migrate-path=/org/gnome/logs/"
@@ -101,12 +101,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/gnome-logs/3.34/gnome-logs-3.34.0.tar.xz",
-          "sha256": "15f4af7085c88321624dc9416f07e7f997fc0fe4c6dd585bce512b11d2e34e9a"
-        },
-        {
-          "type": "patch",
-          "path": "appdata.patch"
+          "url": "https://download.gnome.org/sources/gnome-logs/3.36/gnome-logs-3.36.0.tar.xz",
+          "sha256": "44766b61a6899e1b4c51ed7a8840608e6b9277f341f856a1e5c08dbd7a733670"
         }
       ]
     }
