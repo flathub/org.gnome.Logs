@@ -29,6 +29,23 @@
       ]
     },
     {
+      "name": "rsync",
+      "config-opts": [
+        "--disable-zstd",
+        "--disable-xxhash"
+      ],
+      "cleanup": [
+        "/share"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.samba.org/pub/rsync/src/rsync-3.2.3.tar.gz",
+          "sha256": "becc3c504ceea499f4167a260040ccf4d9f2ef9499ad5683c179a697146ce50e"
+        }
+      ]
+    },
+    {
       "name": "systemd",
       "buildsystem": "meson",
       "config-opts": [
