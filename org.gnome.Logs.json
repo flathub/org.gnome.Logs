@@ -1,7 +1,7 @@
 {
   "app-id": "org.gnome.Logs",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.38",
+  "runtime-version": "41",
   "sdk": "org.gnome.Sdk",
   "command": "gnome-logs",
   "finish-args": [
@@ -25,6 +25,23 @@
           "url": "https://github.com/lz4/lz4",
           "tag": "v1.9.2",
           "commit": "fdf2ef5809ca875c454510610764d9125ef2ebbd"
+        }
+      ]
+    },
+    {
+      "name": "rsync",
+      "config-opts": [
+        "--disable-zstd",
+        "--disable-xxhash"
+      ],
+      "cleanup": [
+        "/share"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "url": "https://download.samba.org/pub/rsync/src/rsync-3.2.3.tar.gz",
+          "sha256": "becc3c504ceea499f4167a260040ccf4d9f2ef9499ad5683c179a697146ce50e"
         }
       ]
     },
