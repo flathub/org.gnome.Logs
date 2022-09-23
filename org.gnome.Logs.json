@@ -1,11 +1,12 @@
 {
   "app-id": "org.gnome.Logs",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "42",
+  "runtime-version": "43",
   "sdk": "org.gnome.Sdk",
   "command": "gnome-logs",
   "finish-args": [
     "--share=ipc", "--socket=fallback-x11",
+    "--device=dri",
     "--socket=wayland",
     "--filesystem=/var/log/journal:ro",
     "--metadata=X-DConf=migrate-path=/org/gnome/logs/"
@@ -46,6 +47,25 @@
       ]
     },
     {
+        "name": "python3-jinja2",
+        "buildsystem": "simple",
+        "build-commands": [
+            "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"jinja2\" --no-build-isolation"
+        ],
+        "sources": [
+            {
+                "type": "file",
+                "url": "https://files.pythonhosted.org/packages/1d/97/2288fe498044284f39ab8950703e88abbac2abbdf65524d576157af70556/MarkupSafe-2.1.1.tar.gz",
+                "sha256": "7f91197cc9e48f989d12e4e6fbc46495c446636dfc81b9ccf50bb0ec74b91d4b"
+            },
+            {
+                "type": "file",
+                "url": "https://files.pythonhosted.org/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl",
+                "sha256": "6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61"
+            }
+        ]
+    },
+    {
       "name": "systemd",
       "buildsystem": "meson",
       "config-opts": [
@@ -53,7 +73,11 @@
         "-Drootprefix=/app",
         "-Drootlibdir=/app/lib",
         "-Dsysconfdir=/app/etc",
+        "-Ddocdir=/app/share/doc",
+        "-Dsysvinit-path=/app/etc/init.d",
 
+        "-Dfdisk=false",
+        "-Ddbus=false",
         "-Dutmp=false",
         "-Dhibernate=false",
         "-Dldconfig=false",
@@ -101,14 +125,14 @@
         "/lib/sysctl.d",
         "/lib/systemd",
         "/lib/udev",
+        "/app/share/doc",
         "/share"
       ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/systemd/systemd.git",
-          "tag": "v246",
-          "commit": "ae366f3acbc1a45504e9875099b17a7e1a221d03"
+          "tag": "v251"
         }
       ]
     },
@@ -118,8 +142,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/gnome-logs/42/gnome-logs-42.0.tar.xz",
-          "sha256": "4d5e45169d6bf43902d7a9e9a0793c916eb92daba6ba85b35c8eb6f672cdabd7"
+          "url": "https://download.gnome.org/sources/gnome-logs/43/gnome-logs-43.beta.tar.xz",
+          "sha256": "9da06e885865edd1bfbcf20b2d4e87c1500651729d656fff13bee936509395d4"
         }
       ]
     }
