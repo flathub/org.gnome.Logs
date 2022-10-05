@@ -142,8 +142,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://download.gnome.org/sources/gnome-logs/43/gnome-logs-43.beta.tar.xz",
-          "sha256": "9da06e885865edd1bfbcf20b2d4e87c1500651729d656fff13bee936509395d4"
+          "url": "https://download.gnome.org/sources/gnome-logs/43/gnome-logs-43.0.tar.xz",
+          "sha256": "33a93b975ec27c8487825048aa7b8af7d5c23565abcf7b74c902ab7b3ec20861"
         }
       ]
     }
