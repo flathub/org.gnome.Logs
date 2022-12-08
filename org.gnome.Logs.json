@@ -143,7 +143,11 @@
         {
           "type": "archive",
           "url": "https://download.gnome.org/sources/gnome-logs/43/gnome-logs-43.0.tar.xz",
-          "sha256": "33a93b975ec27c8487825048aa7b8af7d5c23565abcf7b74c902ab7b3ec20861"
+          "sha256": "33a93b975ec27c8487825048aa7b8af7d5c23565abcf7b74c902ab7b3ec20861",
+          "x-checker-data": {
+            "type": "gnome",
+            "name": "gnome-logs"
+          }
         }
       ]
     }
