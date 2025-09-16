@@ -1,7 +1,7 @@
 {
     "id": "org.gnome.Logs",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "48",
+    "runtime-version": "49",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-logs",
     "finish-args": [
@@ -42,8 +42,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.samba.org/pub/rsync/src/rsync-3.2.3.tar.gz",
-                    "sha256": "becc3c504ceea499f4167a260040ccf4d9f2ef9499ad5683c179a697146ce50e"
+                    "url": "https://download.samba.org/pub/rsync/src/rsync-3.4.1.tar.gz",
+                    "sha256": "2924bcb3a1ed8b551fc101f740b9f0fe0a202b115027647cf69850d65fd88c52"
                 }
             ]
         },
@@ -76,8 +76,8 @@
                 "-Dsysconfdir=/app/etc",
                 "-Ddocdir=/app/share/doc",
                 "-Dsysvinit-path=/app/etc/init.d",
-                "-Dfdisk=false",
-                "-Ddbus=false",
+                "-Dfdisk=disabled",
+                "-Ddbus=disabled",
                 "-Dutmp=false",
                 "-Dhibernate=false",
                 "-Dldconfig=false",
@@ -95,10 +95,10 @@
                 "-Dnetworkd=false",
                 "-Dtimedated=false",
                 "-Dtimesyncd=false",
-                "-Dremote=false",
+                "-Dremote=disabled",
                 "-Dnss-myhostname=false",
-                "-Dnss-mymachines=false",
-                "-Dnss-resolve=false",
+                "-Dnss-mymachines=disabled",
+                "-Dnss-resolve=disabled",
                 "-Dnss-systemd=false",
                 "-Dfirstboot=false",
                 "-Drandomseed=false",
@@ -107,11 +107,11 @@
                 "-Dquotacheck=false",
                 "-Dsysusers=false",
                 "-Dtmpfiles=false",
-                "-Dimportd=false",
+                "-Dimportd=disabled",
                 "-Dhwdb=false",
                 "-Drfkill=false",
-                "-Dman=false",
-                "-Dhtml=false",
+                "-Dman=disabled",
+                "-Dhtml=disabled",
                 "-Dbashcompletiondir=no",
                 "-Dzshcompletiondir=no"
             ],
@@ -140,7 +140,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/systemd/systemd.git",
-                    "tag": "v255"
+                    "tag": "v256"
                 }
             ]
         },
@@ -150,8 +150,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-logs/45/gnome-logs-45.0.tar.xz",
-                    "sha256": "b28a06ea5c98bd17f2873b507f085b0ca0de9810136611f4f2eeb098614ece52",
+                    "url": "https://download.gnome.org/sources/gnome-logs/49/gnome-logs-49.0.tar.xz",
+                    "sha256": "f8f579eb0bb6d9a8d6ae5ee1423f9447af91200785178b50bbadd4ac2d255d45",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-logs"
