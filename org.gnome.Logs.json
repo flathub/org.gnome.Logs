@@ -175,7 +175,8 @@
                     "sha256": "f8f579eb0bb6d9a8d6ae5ee1423f9447af91200785178b50bbadd4ac2d255d45",
                     "x-checker-data": {
                         "type": "gnome",
-                        "name": "gnome-logs"
+                        "name": "gnome-logs",
+                        "is-important": true
                     }
                 }
             ]
