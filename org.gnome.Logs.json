@@ -89,8 +89,6 @@
             "buildsystem": "meson",
             "config-opts": [
                 "--libdir=lib",
-                "-Drootprefix=/app",
-                "-Drootlibdir=/app/lib",
                 "-Dsysconfdir=/app/etc",
                 "-Ddocdir=/app/share/doc",
                 "-Dsysvinit-path=/app/etc/init.d",
@@ -158,7 +156,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/systemd/systemd.git",
-                    "tag": "v256"
+                    "tag": "v258",
+                    "commit": "781d9d0789379d1ea1f2ecefb804d41e9c8b6c38",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
                 }
             ]
         },
