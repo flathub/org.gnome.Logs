@@ -20,13 +20,17 @@
         {
             "name": "liblz4",
             "buildsystem": "meson",
-            "subdir": "contrib/meson",
+            "subdir": "build/meson",
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/lz4/lz4",
-                    "tag": "v1.9.2",
-                    "commit": "fdf2ef5809ca875c454510610764d9125ef2ebbd"
+                    "tag": "v1.10.0",
+                    "commit": "ebb370ca83af193212df4dcbadcc5d87bc0de2f0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
                 }
             ]
         },
