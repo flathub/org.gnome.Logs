@@ -20,13 +20,17 @@
         {
             "name": "liblz4",
             "buildsystem": "meson",
-            "subdir": "contrib/meson",
+            "subdir": "build/meson",
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/lz4/lz4",
-                    "tag": "v1.9.2",
-                    "commit": "fdf2ef5809ca875c454510610764d9125ef2ebbd"
+                    "tag": "v1.10.0",
+                    "commit": "ebb370ca83af193212df4dcbadcc5d87bc0de2f0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
                 }
             ]
         },
@@ -43,7 +47,12 @@
                 {
                     "type": "archive",
                     "url": "https://download.samba.org/pub/rsync/src/rsync-3.4.1.tar.gz",
-                    "sha256": "2924bcb3a1ed8b551fc101f740b9f0fe0a202b115027647cf69850d65fd88c52"
+                    "sha256": "2924bcb3a1ed8b551fc101f740b9f0fe0a202b115027647cf69850d65fd88c52",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 4217,
+                        "url-template": "https://download.samba.org/pub/rsync/src/rsync-$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -56,13 +65,22 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1d/97/2288fe498044284f39ab8950703e88abbac2abbdf65524d576157af70556/MarkupSafe-2.1.1.tar.gz",
-                    "sha256": "7f91197cc9e48f989d12e4e6fbc46495c446636dfc81b9ccf50bb0ec74b91d4b"
+                    "url": "https://files.pythonhosted.org/packages/b2/97/5d42485e71dfc078108a86d6de8fa46db44a1a9295e89c5d6d4a06e23a62/markupsafe-3.0.2.tar.gz",
+                    "sha256": "ee55d3edf80167e48ea11a923c7386f4669df67d7994554387f84e7d8b0a2bf0",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "markupsafe"
+                    }
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bc/c3/f068337a370801f372f2f8f6bad74a5c140f6fda3d9de154052708dd3c65/Jinja2-3.1.2-py3-none-any.whl",
-                    "sha256": "6088930bfe239f0e6710546ab9c19c9ef35e29792895fed6e6e31a023a182a61"
+                    "url": "https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl",
+                    "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "jinja2",
+                        "packagetype": "bdist_wheel"
+                    }
                 }
             ]
         },
@@ -71,8 +89,6 @@
             "buildsystem": "meson",
             "config-opts": [
                 "--libdir=lib",
-                "-Drootprefix=/app",
-                "-Drootlibdir=/app/lib",
                 "-Dsysconfdir=/app/etc",
                 "-Ddocdir=/app/share/doc",
                 "-Dsysvinit-path=/app/etc/init.d",
@@ -140,7 +156,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/systemd/systemd.git",
-                    "tag": "v256"
+                    "tag": "v258",
+                    "commit": "781d9d0789379d1ea1f2ecefb804d41e9c8b6c38",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
                 }
             ]
         },
@@ -154,7 +175,8 @@
                     "sha256": "f8f579eb0bb6d9a8d6ae5ee1423f9447af91200785178b50bbadd4ac2d255d45",
                     "x-checker-data": {
                         "type": "gnome",
-                        "name": "gnome-logs"
+                        "name": "gnome-logs",
+                        "is-important": true
                     }
                 }
             ]
